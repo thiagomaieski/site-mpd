@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import foto1 from '../assets/foto-1-drmarcos.jpeg'
+import bgHero from '../assets/background-hero.avif'
+import bgHeroMobile from '../assets/bg-mobile.avif'
 
 const WA_URL = "https://wa.me/5519988884886?text=Ol%C3%A1%2C%20Dr.%20Marcos.%20Gostaria%20de%20agendar%20uma%20consulta%20jur%C3%ADdica."
 
@@ -17,27 +18,34 @@ const fadeUp = {
   hidden: { opacity: 0, y: 18 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } }
 }
-const fadeIn = {
-  hidden: { opacity: 0, scale: 0.98 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: 0.25 } }
-}
+
 
 export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center bg-[#FDFDFD] overflow-hidden"
+      className="relative min-h-screen flex items-end lg:items-center bg-[#FDFDFD] overflow-hidden bg-center bg-cover bg-no-repeat hero-bg-responsive"
+      style={{
+        '--bg-desktop': `url(${bgHero})`,
+        '--bg-mobile': `url(${bgHeroMobile})`
+      } as React.CSSProperties}
     >
-      {/* Subtle editorial vertical rules */}
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div className="absolute left-[8%] top-0 bottom-0 w-px bg-[#1A1A1A]/[0.035]" />
-        <div className="absolute right-[8%] top-0 bottom-0 w-px bg-[#1A1A1A]/[0.035] hidden md:block" />
-      </div>
+      <style>{`
+        .hero-bg-responsive {
+          background-image: var(--bg-mobile);
+        }
+        @media (min-width: 1024px) {
+          .hero-bg-responsive {
+            background-image: var(--bg-desktop);
+          }
+        }
+      `}</style>
+
 
       {/* Gold top-left accent */}
       <div className="absolute top-0 left-0 w-24 lg:w-32 h-[2px] bg-[#C59C47]" />
 
-      <div className="max-w-[1280px] mx-auto px-6 xl:px-0 w-full pt-28 pb-12 lg:pt-0 lg:pb-0 grid grid-cols-1 lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_460px] gap-10 lg:gap-16 xl:gap-20 items-center min-h-screen">
+      <div className="max-w-[1280px] mx-auto px-6 xl:px-0 w-full pt-28 pb-16 lg:pt-0 lg:pb-0 grid grid-cols-1 lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_460px] gap-10 lg:gap-16 xl:gap-20 items-end lg:items-center min-h-screen">
 
         {/* ── LEFT: Text ── */}
         <motion.div
@@ -47,8 +55,8 @@ export default function Hero() {
           className="flex flex-col justify-center py-10 lg:py-20 order-2 lg:order-1"
         >
           {/* Eyebrow */}
-          <motion.p variants={fadeUp} className="text-xs md:text-sm font-sans font-bold tracking-[0.25em] text-[#C59C47] uppercase mb-6">
-            Advocacia de Alto Padrão&nbsp;&nbsp;·&nbsp;&nbsp;Atendimento a Distância
+          <motion.p variants={fadeUp} className="text-[10px] sm:text-xs md:text-sm font-sans font-bold tracking-[0.2em] sm:tracking-[0.25em] text-[#C59C47] uppercase mb-6">
+            Full Service&nbsp;&nbsp;·&nbsp;&nbsp;Atendimento a Distância
           </motion.p>
 
           {/* Headline — 2 lines, max impact */}
@@ -83,7 +91,7 @@ export default function Hero() {
 
             <a
               href="#areas"
-              className="inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-sans font-bold uppercase tracking-[0.18em] text-[#1A1A1A]/70 hover:text-[#C59C47] transition-colors duration-200 py-3 sm:py-0"
+              className="hidden sm:inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-sans font-bold uppercase tracking-[0.18em] text-[#1A1A1A]/70 hover:text-[#C59C47] transition-colors duration-200 py-3 sm:py-0"
             >
               Ver áreas de atuação
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -91,27 +99,8 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* ── RIGHT: Portrait ── */}
-        <motion.div
-          variants={fadeIn}
-          initial="hidden"
-          animate="visible"
-          className="relative w-full flex items-end justify-center lg:justify-end order-1 lg:order-2 pt-20 lg:pt-0"
-        >
-          {/* Gold offset frame */}
-          <div className="absolute bottom-0 right-0 w-[calc(100%-20px)] lg:w-full max-w-[380px] xl:max-w-[440px] aspect-[3/4] border border-[#C59C47]/30 translate-x-2.5 translate-y-2.5 pointer-events-none" />
-
-          {/* Photo */}
-          <div className="relative w-full max-w-[380px] xl:max-w-[440px] aspect-[3/4] overflow-hidden bg-[#F0EDE8] shadow-[0_24px_64px_rgba(0,0,0,0.10)]">
-            <img
-              src={foto1}
-              alt="Dr. Marcos P. Dias — MPD Advocacia"
-              className="w-full h-full object-cover object-[center_20%]"
-              loading="eager"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/25 via-transparent to-transparent pointer-events-none" />
-          </div>
-        </motion.div>
+        {/* Empty spacer for the right column to preserve grid layout */}
+        <div className="hidden lg:block order-1 lg:order-2" />
       </div>
     </section>
   )

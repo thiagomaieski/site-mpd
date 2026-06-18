@@ -105,19 +105,9 @@ export default function Areas() {
                 <p className="text-xs md:text-sm font-sans font-bold uppercase tracking-[0.2em] text-[#C59C47] mb-5">
                   {area.sub}
                 </p>
-                <p className="font-sans font-light text-[#1A1A1A]/85 text-sm md:text-base leading-relaxed mb-6">
+                <p className="font-sans font-light text-[#1A1A1A]/85 text-sm md:text-base leading-relaxed mb-8">
                   {area.desc}
                 </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-7">
-                  {area.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs font-sans font-semibold uppercase tracking-[0.08em] text-[#1A1A1A]/70 border border-[#DDDCDA] group-hover:border-[#C59C47]/30 px-3 py-1 transition-colors duration-300"
-                    >{tag}</span>
-                  ))}
-                </div>
 
                 <a
                   href={`${WA_URL} — Área: Direito ${area.title}.`}

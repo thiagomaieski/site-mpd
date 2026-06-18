@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import fotoAbout from '../assets/foto-2-drmarcos.jpeg'
+import fotoAbout from '../assets/drmarcos-sobre.avif'
 
 const PILLARS = [
   'Proposta "Full Service" com soluções jurídicas integradas',

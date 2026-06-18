@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import fotoCTA from '../assets/foto-3-drmarcos.jpeg'
+import fotoCTA from '../assets/drmarcos-cta.avif'
 
 const WA_URL = "https://wa.me/5519988884886?text=Ol%C3%A1%2C%20Dr.%20Marcos.%20Gostaria%20de%20iniciar%20uma%20consulta%20jur%C3%ADdica."
 

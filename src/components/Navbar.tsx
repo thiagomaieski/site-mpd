@@ -26,8 +26,10 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-white border-b border-[#EDEDED] shadow-[0_2px_20px_rgba(0,0,0,0.04)] ${
-          scrolled ? 'py-3' : 'py-5'
+        className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+          scrolled
+            ? 'py-3 bg-white border-b border-[#EDEDED] shadow-[0_2px_20px_rgba(0,0,0,0.04)]'
+            : 'py-5 bg-transparent border-b border-transparent shadow-none'
         }`}
       >
         <div className="max-w-[1280px] mx-auto px-6 xl:px-0 flex items-center justify-between">
