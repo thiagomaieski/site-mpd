@@ -1,88 +1,45 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 
-const WA_URL = "https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dr.%20Marcos.%20Gostaria%20de%20consultar%20sobre%20um%20caso%20jur%C3%ADdico."
+import trabalhistaIcon from '../assets/trabalhista.svg'
+import previdenciarioIcon from '../assets/previdenciario.svg'
+import civelIcon from '../assets/civel.svg'
+import criminalIcon from '../assets/criminal.svg'
 
+const WA_URL = "https://wa.me/5519988884886?text=Ol%C3%A1%2C%20Dr.%20Marcos.%20Gostaria%20de%20consultar%20sobre%20um%20caso%20jur%C3%ADdico."
+ 
 const AREAS = [
   {
     num: '01',
     title: 'Trabalhista',
-    sub: 'Direito Individual e Executivo',
-    desc: 'Representação em rescisões de alto valor, acúmulo de funções, stock options e disputas de cargos de confiança. Foco em resultados e na reputação profissional do cliente.',
-    tags: ['Rescisão Indireta', 'Stock Options', 'Cargos de Diretoria', 'Indenizações'],
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12 text-[#C59C47] mb-6 transition-transform duration-300 group-hover:scale-110">
-        <rect width="20" height="13" x="2" y="7" rx="2" ry="2"/>
-        <path d="M16 7V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v3"/>
-        <path d="M8 7v13M16 7v13"/>
-        <circle cx="8" cy="11" r="0.75" fill="currentColor"/>
-        <circle cx="16" cy="11" r="0.75" fill="currentColor"/>
-      </svg>
-    ),
+    sub: 'Consultivo e Contencioso Trabalhista',
+    desc: 'Atuação em demandas trabalhistas, abrangendo o âmbito consultivo e preventivo, ações judiciais, contratos de trabalho, análises documentais e assessoria na relação entre empregado e empregador.',
+    tags: ['Demandas trabalhistas', 'Consultivo / preventivo', 'Ações judiciais', 'Relação empregado / empregador', 'Contratos de trabalho', 'Análises de documentos diversos'],
+    icon: trabalhistaIcon,
   },
   {
     num: '02',
     title: 'Previdenciário',
-    sub: 'Planejamento e Concessão de Benefícios',
-    desc: 'Planejamento previdenciário para aposentadorias de alto valor. Atuação nas revisões, aposentadoria especial e transições pós-reforma, na via administrativa e judicial.',
-    tags: ['Aposentadoria Especial', 'Revisão da Vida Toda', 'Regras de Transição', 'Planejamento'],
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12 text-[#C59C47] mb-6 transition-transform duration-300 group-hover:scale-110">
-        {/* Shield */}
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-        {/* Hourglass inside */}
-        <path d="M9 8h6M9 16h6"/>
-        <path d="M9 8c0 1.5 1 3 3 4 2-1 3-2.5 3-4"/>
-        <path d="M9 16c0-1.5 1-3 3-4 2 1 3 2.5 3 4"/>
-        <line x1="12" y1="10" x2="12" y2="14" strokeDasharray="1 2"/>
-      </svg>
-    ),
+    sub: 'Previdência Social',
+    desc: 'Consultoria e contencioso em benefícios da Previdência Social, como Salário Maternidade, Auxílio Doença e Acidente, Pensão por Morte, além de Planejamento Previdenciário, revisões e BPC-LOAS.',
+    tags: ['Salário Maternidade', 'Auxílio Doença e Acidente', 'Pensão por Morte', 'Revisão de benefício', 'Planejamento Previdenciário', 'BPC - LOAS'],
+    icon: previdenciarioIcon,
   },
   {
     num: '03',
     title: 'Cível',
-    sub: 'Patrimônio, Contratos e Sucessão',
-    desc: 'Contratos civis e comerciais, planejamento sucessório via holding familiar e defense em disputas patrimoniais e societárias de alta complexidade.',
-    tags: ['Planejamento Sucessório', 'Holdings Familiares', 'Contratos', 'Disputas Societárias'],
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12 text-[#C59C47] mb-6 transition-transform duration-300 group-hover:scale-110">
-        {/* Back Page */}
-        <path d="M9 3h7a2 2 0 0 1 2 2v12"/>
-        {/* Front Page */}
-        <rect x="4" y="7" width="11" height="14" rx="1.5" ry="1.5"/>
-        {/* Text Lines */}
-        <path d="M7 11h5M7 14h5M7 17h3"/>
-        {/* Wax Seal */}
-        <circle cx="12" cy="14" r="2.5"/>
-        <path d="M12 16.5v2.5M13.5 16.2l1.2 1.8"/>
-      </svg>
-    ),
+    sub: 'Direito Civil',
+    desc: 'Assessoria completa em relações civis, englobando cobranças judiciais e extrajudiciais, elaboração e análise de contratos, ações indenizatórias, revisões e rescisões contratuais, defesas em geral e acidentes de trânsito.',
+    tags: ['Contratos', 'Cobranças Extrajudiciais', 'Cobranças Judiciais', 'Revisões e rescisões contratuais', 'Ações, defesas', 'Indenizações', 'Acidentes de trânsito'],
+    icon: civelIcon,
   },
   {
     num: '04',
     title: 'Criminal',
-    sub: 'Defesa Penal e Compliance',
-    desc: 'Atuação discreta em Direito Penal Econômico. Defesa em crimes tributários, financeiros e lavagem de capitais, com visão integrada de compliance.',
-    tags: ['Crimes Financeiros', 'Penal Tributário', 'Inquéritos', 'Compliance'],
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12 text-[#C59C47] mb-6 transition-transform duration-300 group-hover:scale-110">
-        {/* Left Ring */}
-        <circle cx="6.5" cy="13.5" r="4.5"/>
-        {/* Left hinge locking bar */}
-        <path d="M10 9.5a1.5 1.5 0 0 1 1 1.5v3"/>
-        {/* Right Ring */}
-        <circle cx="17.5" cy="13.5" r="4.5"/>
-        {/* Right hinge locking bar */}
-        <path d="M14 9.5a1.5 1.5 0 0 0-1 1.5v3"/>
-        {/* Chain Link between */}
-        <path d="M9 13.5h6"/>
-        {/* Keyholes inside */}
-        <circle cx="6.5" cy="13.5" r="1"/>
-        <path d="M6.5 14.5v1.5"/>
-        <circle cx="17.5" cy="13.5" r="1"/>
-        <path d="M17.5 14.5v1.5"/>
-      </svg>
-    ),
+    sub: 'Defesa Penal',
+    desc: 'Defesa criminal estratégica com atuação ágil e discreta em prisão em flagrante, inquérito policial, audiência de custódia, ações penais, habeas corpus, recursos em tribunais, execução penal, revisão criminal e crimes de natureza sexual.',
+    tags: ['Prisão em Flagrante', 'Inquérito Policial', 'Audiência de Custódia', 'Ação Penal', 'Habeas Corpus', 'Recursos nos Tribunais', 'Execução Penal', 'Revisão Criminal', 'Crimes de Natureza Sexual'],
+    icon: criminalIcon,
   },
 ]
 
@@ -137,7 +94,11 @@ export default function Areas() {
               }`} />
 
               <div className="relative z-10">
-                {area.icon}
+                <img
+                  src={area.icon}
+                  alt={area.title}
+                  className="w-12 h-12 mb-6 transition-transform duration-300 group-hover:scale-110 object-contain"
+                />
                 <h3 className="font-serif font-medium text-[#1A1A1A] text-xl lg:text-2xl leading-tight mb-2">
                   {area.title}
                 </h3>

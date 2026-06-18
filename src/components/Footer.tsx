@@ -1,6 +1,6 @@
 import mpdLogo from '../assets/logo-mpd-colorida.svg'
 
-const WA_URL = "https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dr.%20Marcos.%20Gostaria%20de%20agendar%20uma%20consulta."
+const WA_URL = "https://wa.me/5519988884886?text=Ol%C3%A1%2C%20Dr.%20Marcos.%20Gostaria%20de%20agendar%20uma%20consulta."
 const YEAR = new Date().getFullYear()
 
 const NAV_LINKS = [
@@ -28,19 +28,31 @@ export default function Footer() {
             />
           </a>
           <p className="font-sans font-light text-sm text-[#1A1A1A]/70 leading-relaxed max-w-[22rem] mb-6">
-            Boutique jurídica autoral dedicada à defesa estratégica e personalizada de causas complexas.
+            Escritório com proposta Full Service, oferecendo soluções jurídicas completas e atendimento digital moderno em diversos ramos do direito.
           </p>
           {/* Social Icons */}
-          <div className="flex items-center gap-4">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-[#1A1A1A]/40 hover:text-[#C59C47] transition-colors duration-200" aria-label="Instagram">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <div className="flex items-center gap-3">
+            <a
+              href="https://www.instagram.com/mpdadvocacia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 flex items-center justify-center border border-[#E5E5E3] text-[#1A1A1A]/50 hover:text-[#C59C47] hover:border-[#C59C47]/60 hover:bg-[#F8F9FA] transition-all duration-300"
+              aria-label="Instagram"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
                 <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
               </svg>
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-[#1A1A1A]/40 hover:text-[#C59C47] transition-colors duration-200" aria-label="Facebook">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <a
+              href="https://www.facebook.com/mpdadvocacia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 flex items-center justify-center border border-[#E5E5E3] text-[#1A1A1A]/50 hover:text-[#C59C47] hover:border-[#C59C47]/60 hover:bg-[#F8F9FA] transition-all duration-300"
+              aria-label="Facebook"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
               </svg>
             </a>
@@ -71,10 +83,10 @@ export default function Footer() {
             Contato
           </p>
           <ul className="space-y-3 font-sans font-light text-sm md:text-base text-[#1A1A1A]/70 mb-6">
-            <li>Av. Paulista, 1000 — 14º Andar</li>
-            <li>São Paulo / SP</li>
-            <li className="pt-1">+55 (11) 99999-9999</li>
-            <li>contato@mpdadvocacia.com.br</li>
+            <li>R. Amélia Furlaneto dos Santos, 367, Sumaré - SP</li>
+            <li className="pt-1">Telefone/WhatsApp: (19) 98888-4886</li>
+            <li>contato@mpdadvocacia.adv.br</li>
+            <li className="text-xs md:text-sm text-[#1A1A1A]/50">Seg - Sex 08:00 - 18:00</li>
           </ul>
           <a
             href={WA_URL}

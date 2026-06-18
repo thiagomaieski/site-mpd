@@ -2,10 +2,10 @@ import { motion } from 'framer-motion'
 import fotoAbout from '../assets/foto-2-drmarcos.jpeg'
 
 const PILLARS = [
-  'Formação jurídica de excelência e atualização contínua',
-  'Atuação pessoal em todas as fases do processo',
-  'Comunicação clara, sem jargão, com retorno garantido',
-  'Sigilo absoluto como premissa inegociável',
+  'Proposta "Full Service" com soluções jurídicas integradas',
+  'Atuação diversificada com advogados especialistas e parceiros',
+  'Foco na prevenção de litígios e mediação de conflitos',
+  'Advocacia moderna com atendimento digital a distância',
 ]
 
 export default function About() {
@@ -60,10 +60,10 @@ export default function About() {
 
             <div className="space-y-6 font-sans font-light text-[#1A1A1A]/80 text-base sm:text-lg leading-[1.85]">
               <p>
-                A <strong className="font-medium text-[#1A1A1A]">MPD Advocacia</strong> nasceu da convicção de que defesa de qualidade exige envolvimento real. Não a presença simbólica de um sócio em uma reunião inicial e o restante delegado a quem ainda está aprendendo — mas a presença efetiva de quem compreende os riscos e sabe como enfrentá-los.
+                A <strong className="font-medium text-[#1A1A1A]">MPD Advocacia</strong> atua com uma proposta <strong className="font-medium text-[#1A1A1A]">"Full Service"</strong>. Nossa filosofia de atuação consiste em oferecer aos clientes diversos serviços e soluções jurídicas em um mesmo escritório, atuando de forma diversificada em vários ramos do direito.
               </p>
               <p>
-                O <strong className="font-medium text-[#1A1A1A]">Dr. Marcos</strong> conduz pessoalmente a análise, a estratégia e a execução de cada mandato. Acesso direto, respostas rápidas e a certeza de que seus direitos estão nas mãos de quem assina cada peça.
+                Por meio de uma equipe de advogados especialistas e também de escritórios parceiros estrategicamente selecionados, conseguimos atingir maior assertividade em cada área de atuação. Unimos a solidez da advocacia tradicional com a agilidade da <strong className="font-medium text-[#1A1A1A]">advocacia moderna</strong>, priorizando sempre a prevenção de litígios, a mediação de conflitos e a conveniência do <strong className="font-medium text-[#1A1A1A]">atendimento 100% a distância</strong>.
               </p>
             </div>
 

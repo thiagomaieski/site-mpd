@@ -15,8 +15,8 @@
   }
 
   ::selection {
-    background: rgba(197, 156, 71, 0.12);
-    color: #1A1A1A;
+    background: #C59C47;
+    color: #FFFFFF;
   }
 
   /* Prevent horizontal overflow on mobile */

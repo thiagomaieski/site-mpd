@@ -2,11 +2,11 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const FAQS = [
-  { q: 'O Dr. Marcos atende todos os casos pessoalmente?', a: 'Sim. Não existe delegação a assistentes. O Dr. Marcos conduz pessoalmente a análise, a estratégia e a execução de cada mandato — do início ao encerramento.' },
-  { q: 'Como funciona a primeira consulta?', a: 'Começa por uma mensagem no WhatsApp. O Dr. Marcos faz a triagem técnica e, havendo viabilidade, agenda reunião presencial ou por videoconferência para aprofundamento.' },
-  { q: 'O escritório atua fora de São Paulo?', a: 'Sim. Com o processo eletrônico, atuamos em qualquer tribunal do país. Reuniões remotas com o mesmo nível de atenção das presenciais.' },
-  { q: 'Que documentos preciso reunir?', a: 'Depende da área. Trabalhistas: carteira de trabalho, holerites, contrato. Previdenciário: extrato do CNIS. No primeiro contato, informamos a lista exata.' },
-  { q: 'Como são calculados os honorários?', a: 'Definidos de forma transparente em contrato, conforme o Código de Ética da OAB. Pró-labore fixo ou honorários de êxito. Tudo apresentado antes de qualquer compromisso.' },
+  { q: 'Como é dividida a atuação nos casos do escritório?', a: 'O Dr. Marcos Dias supervisiona e coordena estrategicamente todas as causas. A execução é realizada de forma integrada através de nossa equipe de advogados especialistas e escritórios parceiros, garantindo excelência e assertividade em cada ramo do direito.' },
+  { q: 'Como funciona a primeira consulta?', a: 'O contato inicial começa pelo WhatsApp. Nossa equipe realiza uma triagem técnica inicial e, havendo viabilidade, agenda-se uma reunião online por videoconferência com os profissionais especialistas no seu caso.' },
+  { q: 'O escritório realiza atendimento fora de São Paulo?', a: 'Sim. Com a advocacia moderna e o atendimento 100% digital e a distância, representamos clientes em tribunais de todo o país com a mesma agilidade e proximidade, sem necessidade de deslocamento físico.' },
+  { q: 'Que documentos preciso reunir?', a: 'Depende da área de atuação. Para causas trabalhistas: carteira de trabalho, holerites e contrato. Para previdenciário: extrato do CNIS. No primeiro contato por WhatsApp, nossa equipe informará a lista exata.' },
+  { q: 'Como são calculados os honorários?', a: 'Os honorários são pactuados de forma transparente em contrato escrito, em estrita observância ao Código de Ética da OAB. Eles podem ser fixos (pró-labore) ou com base no êxito da demanda, sempre apresentados e alinhados antes de qualquer início de trabalho.' },
 ]
 
 function FAQItem({ q, a, open, onToggle }: { q: string; a: string; open: boolean; onToggle: () => void }) {

@@ -12,7 +12,7 @@ import FloatingWhatsApp from './components/FloatingWhatsApp'
 
 function App() {
   return (
-    <div className="bg-[#FDFDFD] min-h-screen text-[#1A1A1A] antialiased selection:bg-[#C59C47]/15 selection:text-[#1A1A1A] overflow-x-hidden">
+    <div className="bg-[#FDFDFD] min-h-screen text-[#1A1A1A] antialiased selection:bg-[#C59C47] selection:text-white overflow-x-hidden">
       <Navbar />
       <main>
         <Hero />

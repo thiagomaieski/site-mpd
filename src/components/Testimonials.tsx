@@ -2,19 +2,19 @@ import { motion } from 'framer-motion'
 
 const REVIEWS = [
   {
-    text: 'A condução da minha rescisão executiva foi cirúrgica. O Dr. Marcos dominou cada detalhe e o resultado superou o esperado.',
-    author: 'F. A.',
-    initials: 'FA'
+    text: 'Fui atendido totalmente à distância em uma demanda trabalhista complexa. O suporte da equipe e a clareza em todas as etapas me deram total segurança e um resultado excelente.',
+    author: 'J. B.',
+    initials: 'JB'
   },
   {
-    text: 'Estruturamos a holding familiar com a MPD. Trabalho rigoroso, comunicação clara, entrega no prazo. Experiência muito acima do padrão.',
-    author: 'M. S.',
-    initials: 'MS'
+    text: 'Realizei todo o meu planejamento previdenciário e a concessão do benefício através do atendimento online. Processo extremamente ágil, ético e organizado.',
+    author: 'J. G.',
+    initials: 'JG'
   },
   {
-    text: 'Causa complexa com acúmulo de funções e stock options. O Dr. Marcos conhecia cada nuance. Estratégia precisa, resultado excelente.',
-    author: 'Dr. L. R.',
-    initials: 'LR'
+    text: 'Excelente suporte em uma ação cível contratual. A equipe foi transparente, rápida e resolveu tudo de forma digital, sem burocracia.',
+    author: 'M. H.',
+    initials: 'MH'
   },
 ]
 

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import foto1 from '../assets/foto-1-drmarcos.jpeg'
 
-const WA_URL = "https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dr.%20Marcos.%20Gostaria%20de%20agendar%20uma%20consulta%20jur%C3%ADdica."
+const WA_URL = "https://wa.me/5519988884886?text=Ol%C3%A1%2C%20Dr.%20Marcos.%20Gostaria%20de%20agendar%20uma%20consulta%20jur%C3%ADdica."
 
 const WA_ICON = (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" className="flex-shrink-0">
@@ -48,7 +48,7 @@ export default function Hero() {
         >
           {/* Eyebrow */}
           <motion.p variants={fadeUp} className="text-xs md:text-sm font-sans font-bold tracking-[0.25em] text-[#C59C47] uppercase mb-6">
-            Advocacia de Alto Padrão&nbsp;&nbsp;·&nbsp;&nbsp;São Paulo
+            Advocacia de Alto Padrão&nbsp;&nbsp;·&nbsp;&nbsp;Atendimento a Distância
           </motion.p>
 
           {/* Headline — 2 lines, max impact */}
@@ -66,7 +66,7 @@ export default function Hero() {
 
           {/* Subline */}
           <motion.p variants={fadeUp} className="font-sans font-light text-[#1A1A1A]/75 text-base sm:text-lg leading-[1.8] max-w-[36rem] mb-9">
-            O <strong className="font-medium text-[#1A1A1A]/85">Dr. Marcos</strong> conduz pessoalmente cada causa — da análise inicial à sentença. Sem intermediários, sem delegação. Atuação em Direito Trabalhista, Previdenciário, Cível e Criminal.
+            O <strong className="font-medium text-[#1A1A1A]/85">Dr. Marcos Dias</strong> coordena uma equipe de especialistas dedicados a oferecer soluções jurídicas integradas e assertivas nas áreas Trabalhista, Previdenciária, Cível e Criminal, com a conveniência do atendimento digital e à distância.
           </motion.p>
 
           {/* CTAs */}
