@@ -24,7 +24,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative h-[100vh] lg:min-h-screen flex items-end lg:items-center bg-[#FDFDFD] overflow-hidden bg-center bg-cover bg-no-repeat hero-bg-responsive"
+      className="relative h-[100vh] lg:min-h-screen flex items-end lg:items-center bg-[#FDFDFD] overflow-hidden bg-top lg:bg-center bg-cover bg-no-repeat hero-bg-responsive"
       style={{
         '--bg-desktop': `url(${bgHero})`,
         '--bg-mobile': `url(${bgHeroMobile})`
@@ -61,10 +61,10 @@ export default function Hero() {
 
           {/* Headline — 2 lines, max impact */}
           <motion.h1 variants={fadeUp} className="font-serif font-medium text-[#1A1A1A] leading-[1.0] tracking-tight mb-5 sm:mb-8">
-            <span className="block text-[2.2rem] sm:text-[3rem] lg:text-[4.2rem] xl:text-[4.8rem]">
+            <span className="block text-[clamp(1.8rem,8.5vw,2.2rem)] sm:text-[3rem] lg:text-[4.2rem] xl:text-[4.8rem]">
               Seu patrimônio e seus direitos
             </span>
-            <span className="block text-[2.2rem] sm:text-[3rem] lg:text-[4.2rem] xl:text-[4.8rem]">
+            <span className="block text-[clamp(1.8rem,8.5vw,2.2rem)] sm:text-[3rem] lg:text-[4.2rem] xl:text-[4.8rem]">
               merecem <em className="italic text-[#C59C47] font-normal">atenção pessoal</em>.
             </span>
           </motion.h1>
