@@ -24,7 +24,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative h-[100vh] lg:min-h-screen flex items-end lg:items-center bg-[#FDFDFD] overflow-hidden bg-top lg:bg-center bg-cover bg-no-repeat hero-bg-responsive"
+      className="relative h-[100dvh] lg:min-h-screen flex items-end lg:items-center bg-[#FDFDFD] overflow-hidden bg-top lg:bg-center bg-cover bg-no-repeat hero-bg-responsive"
       style={{
         '--bg-desktop': `url(${bgHero})`,
         '--bg-mobile': `url(${bgHeroMobile})`
@@ -42,10 +42,9 @@ export default function Hero() {
       `}</style>
 
 
-      {/* Gold top-left accent */}
-      <div className="absolute top-0 left-0 w-24 lg:w-32 h-[2px] bg-[#C59C47]" />
 
-      <div className="max-w-[1280px] mx-auto px-6 xl:px-0 w-full pt-28 pb-12 lg:pt-0 lg:pb-0 grid grid-cols-1 lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_460px] gap-10 lg:gap-16 xl:gap-20 items-end lg:items-center h-[100vh] lg:min-h-screen">
+
+      <div className="max-w-[1280px] mx-auto px-6 xl:px-0 w-full pt-28 pb-12 lg:pt-0 lg:pb-0 grid grid-cols-1 lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_460px] gap-10 lg:gap-16 xl:gap-20 items-end lg:items-center h-[100dvh] lg:min-h-screen">
 
         {/* ── LEFT: Text ── */}
         <motion.div
@@ -61,10 +60,10 @@ export default function Hero() {
 
           {/* Headline — 2 lines, max impact */}
           <motion.h1 variants={fadeUp} className="font-serif font-medium text-[#1A1A1A] leading-[1.0] tracking-tight mb-5 sm:mb-8">
-            <span className="block text-[clamp(1.8rem,8.5vw,2.2rem)] sm:text-[3rem] lg:text-[4.2rem] xl:text-[4.8rem]">
+            <span className="block text-[clamp(1.8rem,9.15vw,2.2rem)] sm:text-[3rem] lg:text-[4.2rem] xl:text-[4.8rem]">
               Seu patrimônio e seus direitos
             </span>
-            <span className="block text-[clamp(1.8rem,8.5vw,2.2rem)] sm:text-[3rem] lg:text-[4.2rem] xl:text-[4.8rem]">
+            <span className="block text-[clamp(1.8rem,9.15vw,2.2rem)] sm:text-[3rem] lg:text-[4.2rem] xl:text-[4.8rem]">
               merecem <em className="italic text-[#C59C47] font-normal">atenção pessoal</em>.
             </span>
           </motion.h1>
