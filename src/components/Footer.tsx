@@ -1,4 +1,5 @@
 import mpdLogo from '../assets/logo-mpd-colorida.svg'
+import mskLogo from '../assets/logo-msk-wbdsgn-preta.svg'
 
 const WA_URL = "https://wa.me/5519988884886?text=Ol%C3%A1%2C%20Dr.%20Marcos.%20Gostaria%20de%20agendar%20uma%20consulta."
 const YEAR = new Date().getFullYear()
@@ -104,16 +105,22 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-[#EDEDED]">
-        <div className="max-w-[1280px] mx-auto px-6 xl:px-0 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs font-sans text-[#1A1A1A]/50 leading-relaxed text-center sm:text-left">
+        <div className="max-w-[1280px] mx-auto px-6 xl:px-0 py-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <p className="text-xs font-sans text-[#1A1A1A]/50 leading-relaxed text-left">
             © {YEAR} MPD Advocacia · Dr. Marcos P. Dias | OAB/SP 000.000 · Site desenvolvido em conformidade com o Provimento 205/2021 da OAB.
           </p>
-          <a
-            href="#inicio"
-            className="text-xs font-sans font-bold uppercase tracking-[0.2em] text-[#1A1A1A]/50 hover:text-[#C59C47] transition-colors duration-200 whitespace-nowrap"
-          >
-            Topo ↑
-          </a>
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-sans text-[#1A1A1A]/45">Desenvolvido por:</span>
+            <a 
+              href="https://thiagomaieski.com/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="opacity-75 hover:opacity-100 transition-opacity duration-250 flex items-center"
+              aria-label="Maieski Web Design"
+            >
+              <img src={mskLogo} alt="Maieski Web Design Logo" className="h-[26px] w-auto object-contain" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

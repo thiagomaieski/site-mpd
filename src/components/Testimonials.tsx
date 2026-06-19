@@ -133,7 +133,7 @@ export default function Testimonials() {
       <div className="max-w-[1280px] mx-auto px-6 xl:px-0">
 
         {/* Header with Google Rating Badge */}
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-14 gap-6 pb-8 border-b border-[#EDEDED]">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8 lg:mb-14 gap-6 pb-6 lg:pb-8 border-b border-[#EDEDED]">
           <div>
             <p className="text-xs md:text-sm font-sans font-bold tracking-[0.25em] text-[#C59C47] uppercase mb-3">
               Depoimentos
