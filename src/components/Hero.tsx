@@ -24,7 +24,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-end lg:items-center bg-[#FDFDFD] overflow-hidden bg-center bg-cover bg-no-repeat hero-bg-responsive"
+      className="relative h-[100vh] lg:min-h-screen flex items-end lg:items-center bg-[#FDFDFD] overflow-hidden bg-center bg-cover bg-no-repeat hero-bg-responsive"
       style={{
         '--bg-desktop': `url(${bgHero})`,
         '--bg-mobile': `url(${bgHeroMobile})`
@@ -45,22 +45,22 @@ export default function Hero() {
       {/* Gold top-left accent */}
       <div className="absolute top-0 left-0 w-24 lg:w-32 h-[2px] bg-[#C59C47]" />
 
-      <div className="max-w-[1280px] mx-auto px-6 xl:px-0 w-full pt-28 pb-16 lg:pt-0 lg:pb-0 grid grid-cols-1 lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_460px] gap-10 lg:gap-16 xl:gap-20 items-end lg:items-center min-h-screen">
+      <div className="max-w-[1280px] mx-auto px-6 xl:px-0 w-full pt-28 pb-12 lg:pt-0 lg:pb-0 grid grid-cols-1 lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_460px] gap-10 lg:gap-16 xl:gap-20 items-end lg:items-center h-[100vh] lg:min-h-screen">
 
         {/* ── LEFT: Text ── */}
         <motion.div
           variants={stagger}
           initial="hidden"
           animate="visible"
-          className="flex flex-col justify-center py-10 lg:py-20 order-2 lg:order-1"
+          className="flex flex-col justify-end lg:justify-center py-0 lg:py-20 order-2 lg:order-1"
         >
           {/* Eyebrow */}
-          <motion.p variants={fadeUp} className="text-[10px] sm:text-xs md:text-sm font-sans font-bold tracking-[0.2em] sm:tracking-[0.25em] text-[#C59C47] uppercase mb-6">
+          <motion.p variants={fadeUp} className="hidden sm:block text-[10px] sm:text-xs md:text-sm font-sans font-bold tracking-[0.2em] sm:tracking-[0.25em] text-[#C59C47] uppercase mb-6">
             Full Service&nbsp;&nbsp;·&nbsp;&nbsp;Atendimento a Distância
           </motion.p>
 
           {/* Headline — 2 lines, max impact */}
-          <motion.h1 variants={fadeUp} className="font-serif font-medium text-[#1A1A1A] leading-[1.0] tracking-tight mb-8">
+          <motion.h1 variants={fadeUp} className="font-serif font-medium text-[#1A1A1A] leading-[1.0] tracking-tight mb-5 sm:mb-8">
             <span className="block text-[2.2rem] sm:text-[3rem] lg:text-[4.2rem] xl:text-[4.8rem]">
               Seu patrimônio e seus direitos
             </span>
@@ -70,10 +70,10 @@ export default function Hero() {
           </motion.h1>
 
           {/* Separator */}
-          <motion.div variants={fadeUp} className="w-10 h-px bg-[#C59C47] mb-6" />
+          <motion.div variants={fadeUp} className="w-10 h-px bg-[#C59C47] mb-5 sm:mb-6" />
 
           {/* Subline */}
-          <motion.p variants={fadeUp} className="font-sans font-light text-[#1A1A1A]/75 text-base sm:text-lg leading-[1.8] max-w-[36rem] mb-9">
+          <motion.p variants={fadeUp} className="font-sans font-light text-[#1A1A1A]/75 text-base sm:text-lg leading-[1.8] max-w-[36rem] mb-5 sm:mb-9">
             O <strong className="font-medium text-[#1A1A1A]/85">Dr. Marcos Dias</strong> coordena uma equipe de especialistas dedicados a oferecer soluções jurídicas integradas e assertivas nas áreas Trabalhista, Previdenciária, Cível e Criminal, com a conveniência do atendimento digital e à distância.
           </motion.p>
 
