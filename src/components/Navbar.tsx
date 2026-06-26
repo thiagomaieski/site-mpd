@@ -38,7 +38,9 @@ export default function Navbar() {
             <img
               src={mpdLogo}
               alt="MPD Advocacia"
-              className="h-10 md:h-16 w-auto object-contain"
+              className={`w-auto object-contain transition-all duration-300 ${
+                scrolled ? 'h-8 md:h-12' : 'h-10 md:h-16'
+              }`}
             />
           </a>
 
