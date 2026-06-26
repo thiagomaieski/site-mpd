@@ -33,7 +33,7 @@ export default function FloatingWhatsApp() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 10 }}
             transition={{ duration: 0.3 }}
-            className="pointer-events-auto w-12 h-12 rounded-none bg-white hover:bg-[#F8F9FA] text-[#C59C47] border border-[#C59C47] flex items-center justify-center shadow-[0_6px_20px_rgba(0,0,0,0.1)] transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C59C47]"
+            className="pointer-events-auto w-12 h-12 rounded-none bg-[#1A1A1A] hover:bg-[#C59C47] text-[#C59C47] hover:text-[#0B0B0B] border border-[#C59C47] flex items-center justify-center shadow-[0_6px_20px_rgba(0,0,0,0.15)] transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C59C47]"
             aria-label="Voltar para o topo"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

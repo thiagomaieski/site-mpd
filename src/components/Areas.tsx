@@ -47,7 +47,7 @@ export default function Areas() {
   const [active, setActive] = useState<number | null>(null)
 
   return (
-    <section id="areas" className="py-24 lg:py-32 bg-[#F8F9FA] border-y border-[#EDEDED]">
+    <section id="areas" className="py-24 lg:py-32 bg-[#0B0B0B] border-y border-[#C59C47]/10">
       <div className="max-w-[1280px] mx-auto px-6 xl:px-0">
 
         {/* Header */}
@@ -56,12 +56,12 @@ export default function Areas() {
             <p className="text-xs md:text-sm font-sans font-bold tracking-[0.25em] text-[#C59C47] uppercase mb-3">
               Áreas de Atuação
             </p>
-            <h2 className="font-serif font-light text-[#1A1A1A] text-[2.2rem] sm:text-[2.8rem] lg:text-[3.2rem] leading-[1.1] tracking-tight">
+            <h2 className="font-serif font-light text-white text-[2.2rem] sm:text-[2.8rem] lg:text-[3.2rem] leading-[1.1] tracking-tight">
               Expertise além<br className="hidden sm:block" />
               da <em className="italic text-[#C59C47] font-normal">norma</em>.
             </h2>
           </div>
-          <p className="font-sans font-light text-[#1A1A1A]/70 text-sm md:text-base max-w-[320px] leading-relaxed lg:text-right">
+          <p className="font-sans font-light text-white/70 text-sm md:text-base max-w-[320px] leading-relaxed lg:text-right">
             Cada área conduzida com o mesmo rigor técnico. Sem hierarquia de causas.
           </p>
         </div>
@@ -77,35 +77,41 @@ export default function Areas() {
               transition={{ duration: 0.5, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
               onMouseEnter={() => setActive(i)}
               onMouseLeave={() => setActive(null)}
-              className={`group relative bg-white border-2 p-10 lg:p-12 transition-all duration-300 ${
+              className={`group relative p-10 lg:p-12 transition-all duration-500 ease-out border ${
                 active === i
-                  ? 'border-[#C59C47] shadow-[0_8px_36px_rgba(197,156,71,0.12)]'
-                  : 'border-[#E5E5E3] shadow-[0_1px_10px_rgba(0,0,0,0.03)] hover:border-[#C59C47]/60'
+                  ? 'bg-[#C59C47] border-[#C59C47] shadow-[0_20px_48px_rgba(197,156,71,0.25)]'
+                  : 'bg-[#121212] border-[#C59C47]/15 shadow-[0_4px_30px_rgba(0,0,0,0.2)] hover:border-[#C59C47]/50'
               }`}
             >
               {/* Visible index number */}
-              <span className={`absolute top-8 right-8 font-serif text-3xl font-light leading-none select-none pointer-events-none transition-colors duration-300 ${
-                active === i ? 'text-[#C59C47]' : 'text-[#C59C47]/60'
+              <span className={`absolute top-8 right-8 font-serif text-3xl font-light leading-none select-none pointer-events-none transition-colors duration-500 ${
+                active === i ? 'text-[#0B0B0B]/20' : 'text-[#C59C47]/40'
               }`}>{area.num}</span>
 
               {/* Top line */}
               <div className={`absolute top-0 left-0 h-[3px] transition-all duration-500 ease-out ${
-                active === i ? 'w-full bg-[#C59C47]' : 'w-10 bg-[#C59C47]/60'
+                active === i ? 'w-full bg-[#0B0B0B]/30' : 'w-10 bg-[#C59C47]'
               }`} />
 
               <div className="relative z-10">
                 <img
                   src={area.icon}
                   alt={area.title}
-                  className="w-12 h-12 mb-6 transition-transform duration-300 group-hover:scale-110 object-contain"
+                  className="w-12 h-12 mb-6 transition-all duration-500 group-hover:scale-110 group-hover:brightness-0 object-contain"
                 />
-                <h3 className="font-serif font-medium text-[#1A1A1A] text-xl lg:text-2xl leading-tight mb-2">
+                <h3 className={`font-serif font-medium text-xl lg:text-2xl leading-tight mb-2 transition-colors duration-500 ${
+                  active === i ? 'text-[#0B0B0B]' : 'text-white'
+                }`}>
                   {area.title}
                 </h3>
-                <p className="text-xs md:text-sm font-sans font-bold uppercase tracking-[0.2em] text-[#C59C47] mb-5">
+                <p className={`text-xs md:text-sm font-sans font-bold uppercase tracking-[0.2em] mb-5 transition-colors duration-500 ${
+                  active === i ? 'text-[#0B0B0B]/75' : 'text-[#C59C47]'
+                }`}>
                   {area.sub}
                 </p>
-                <p className="font-sans font-light text-[#1A1A1A]/85 text-sm md:text-base leading-relaxed mb-8">
+                <p className={`font-sans font-light text-sm md:text-base leading-relaxed mb-8 transition-colors duration-500 ${
+                  active === i ? 'text-[#0B0B0B]/90' : 'text-white/80'
+                }`}>
                   {area.desc}
                 </p>
 
@@ -113,10 +119,12 @@ export default function Areas() {
                   href={`${WA_URL} — Área: Direito ${area.title}.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs md:text-sm font-sans font-bold uppercase tracking-[0.16em] text-[#1A1A1A]/70 group-hover:text-[#C59C47] transition-colors duration-200"
+                  className={`inline-flex items-center gap-2 text-xs md:text-sm font-sans font-bold uppercase tracking-[0.16em] transition-colors duration-500 ${
+                    active === i ? 'text-[#0B0B0B]' : 'text-white/70 hover:text-[#C59C47]'
+                  }`}
                 >
                   Consultar sobre esta área
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="translate-x-0 group-hover:translate-x-0.5 transition-transform duration-200"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="translate-x-0 group-hover:translate-x-0.5 transition-transform duration-200"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
               </div>
             </motion.div>
@@ -125,7 +133,7 @@ export default function Areas() {
 
         {/* Footer */}
         <div className="mt-12 text-center">
-          <p className="text-sm md:text-base font-sans font-light text-[#1A1A1A]/60">
+          <p className="text-sm md:text-base font-sans font-light text-white/60">
             Situação diferente?{' '}
             <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="text-[#C59C47] font-bold hover:underline underline-offset-4 transition-all">
               Descreva pelo WhatsApp para uma triagem

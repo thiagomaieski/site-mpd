@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
-import bgHero from '../assets/background-hero.avif'
-import bgHeroMobile from '../assets/bg-mobile.avif'
+import bgHero from '../assets/background-hero-mpd-dark-v2.avif'
 
 const WA_URL = "https://wa.me/5519988884886?text=Ol%C3%A1%2C%20Dr.%20Marcos.%20Gostaria%20de%20agendar%20uma%20consulta%20jur%C3%ADdica."
 
@@ -24,10 +23,10 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative h-[100dvh] lg:min-h-screen flex items-end lg:items-center bg-[#FDFDFD] overflow-hidden bg-top lg:bg-center bg-cover bg-no-repeat hero-bg-responsive"
+      className="relative h-[100dvh] lg:min-h-screen flex items-end lg:items-center bg-[#0B0B0B] overflow-hidden bg-top lg:bg-center bg-cover bg-no-repeat hero-bg-responsive"
       style={{
         '--bg-desktop': `url(${bgHero})`,
-        '--bg-mobile': `url(${bgHeroMobile})`
+        '--bg-mobile': `url(${bgHero})`
       } as React.CSSProperties}
     >
       <style>{`
@@ -41,10 +40,7 @@ export default function Hero() {
         }
       `}</style>
 
-
-
-
-      <div className="max-w-[1280px] mx-auto px-6 xl:px-0 w-full pt-28 pb-12 lg:pt-0 lg:pb-0 grid grid-cols-1 lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_460px] gap-10 lg:gap-16 xl:gap-20 items-end lg:items-center h-[100dvh] lg:min-h-screen">
+      <div className="max-w-[1280px] mx-auto px-6 xl:px-0 w-full pt-28 pb-12 lg:pt-0 lg:pb-0 grid grid-cols-1 lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_460px] gap-10 lg:gap-16 xl:gap-20 items-end lg:items-center h-[100dvh] lg:min-h-screen relative z-10">
 
         {/* ── LEFT: Text ── */}
         <motion.div
@@ -53,13 +49,19 @@ export default function Hero() {
           animate="visible"
           className="flex flex-col justify-end lg:justify-center py-0 lg:py-20 order-2 lg:order-1"
         >
-          {/* Eyebrow */}
-          <motion.p variants={fadeUp} className="hidden sm:block text-[10px] sm:text-xs md:text-sm font-sans font-bold tracking-[0.2em] sm:tracking-[0.25em] text-[#C59C47] uppercase mb-6">
-            Full Service&nbsp;&nbsp;·&nbsp;&nbsp;Atendimento a Distância
-          </motion.p>
+          {/* Eyebrow & Online service badge */}
+          <motion.div variants={fadeUp} className="hidden sm:inline-flex items-center gap-2 bg-[#C59C47]/10 px-3.5 py-1.5 mb-6 self-start">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C59C47] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#C59C47]"></span>
+            </span>
+            <span className="text-[10px] sm:text-xs font-sans font-bold uppercase tracking-[0.18em] text-white">
+              Atendimento Online & Presencial · Contratação 100% Remota
+            </span>
+          </motion.div>
 
           {/* Headline — 2 lines, max impact */}
-          <motion.h1 variants={fadeUp} className="font-serif font-medium text-[#1A1A1A] leading-[1.0] tracking-tight mb-5 sm:mb-8">
+          <motion.h1 variants={fadeUp} className="font-serif font-medium text-white leading-[1.0] tracking-tight mb-5 sm:mb-8">
             <span className="block text-[clamp(1.8rem,9.15vw,2.2rem)] sm:text-[3rem] lg:text-[4.2rem] xl:text-[4.8rem]">
               Seu patrimônio e seus direitos
             </span>
@@ -72,8 +74,8 @@ export default function Hero() {
           <motion.div variants={fadeUp} className="w-10 h-px bg-[#C59C47] mb-5 sm:mb-6" />
 
           {/* Subline */}
-          <motion.p variants={fadeUp} className="font-sans font-light text-[#1A1A1A]/75 text-base sm:text-lg leading-[1.8] max-w-[36rem] mb-5 sm:mb-9">
-            O <strong className="font-medium text-[#1A1A1A]/85">Dr. Marcos Dias</strong> coordena uma equipe de especialistas dedicados a oferecer soluções jurídicas integradas e assertivas nas áreas Trabalhista, Previdenciária, Cível e Criminal, com a conveniência do atendimento digital e à distância.
+          <motion.p variants={fadeUp} className="font-sans font-light text-white/80 text-base sm:text-lg leading-[1.8] max-w-[36rem] mb-5 sm:mb-9">
+            O <strong className="font-medium text-[#C59C47]">Dr. Marcos Dias</strong> coordena uma equipe de especialistas dedicados a oferecer soluções jurídicas integradas e assertivas nas áreas Trabalhista, Previdenciária, Cível e Criminal, com a conveniência do atendimento digital e à distância.
           </motion.p>
 
           {/* CTAs */}
@@ -82,7 +84,7 @@ export default function Hero() {
               href={WA_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-3 bg-[#1A1A1A] text-white hover:bg-[#C59C47] px-8 py-4 text-xs sm:text-sm font-sans font-bold uppercase tracking-[0.18em] transition-all duration-300"
+              className="group inline-flex items-center justify-center gap-3 bg-[#C59C47] text-[#0B0B0B] hover:bg-[#d4b573] hover:text-black px-8 py-4 text-xs sm:text-sm font-sans font-bold uppercase tracking-[0.18em] transition-all duration-300 shadow-[0_4px_20px_rgba(197,156,71,0.2)] hover:shadow-[0_8px_24px_rgba(197,156,71,0.35)]"
             >
               {WA_ICON}
               Agendar Consulta
@@ -90,7 +92,7 @@ export default function Hero() {
 
             <a
               href="#areas"
-              className="hidden sm:inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-sans font-bold uppercase tracking-[0.18em] text-[#1A1A1A]/70 hover:text-[#C59C47] transition-colors duration-200 py-3 sm:py-0"
+              className="hidden sm:inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-sans font-bold uppercase tracking-[0.18em] text-white/70 hover:text-[#C59C47] transition-colors duration-200 py-3 sm:py-0"
             >
               Ver áreas de atuação
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>

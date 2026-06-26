@@ -11,16 +11,16 @@ const FAQS = [
 
 function FAQItem({ q, a, open, onToggle }: { q: string; a: string; open: boolean; onToggle: () => void }) {
   return (
-    <div className="border-b border-[#EDEDED]">
+    <div className="border-b border-[#C59C47]/10">
       <button
         onClick={onToggle}
         className="w-full flex items-center justify-between text-left py-5 lg:py-6 gap-5 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#C59C47]/40 group"
         aria-expanded={open}
       >
-        <span className={`font-sans font-semibold text-base lg:text-lg leading-snug transition-colors duration-200 ${open ? 'text-[#C59C47]' : 'text-[#1A1A1A] group-hover:text-[#C59C47]'}`}>
+        <span className={`font-sans font-semibold text-base lg:text-lg leading-snug transition-colors duration-200 ${open ? 'text-[#C59C47]' : 'text-white group-hover:text-[#C59C47]'}`}>
           {q}
         </span>
-        <span className={`flex-shrink-0 w-6 h-6 border flex items-center justify-center transition-all duration-300 ${open ? 'border-[#C59C47] bg-[#C59C47]' : 'border-[#DDDCDA] group-hover:border-[#C59C47]/60'}`}>
+        <span className={`flex-shrink-0 w-6 h-6 border flex items-center justify-center transition-all duration-300 ${open ? 'border-[#C59C47] bg-[#C59C47]' : 'border-neutral-700 group-hover:border-[#C59C47]/60'}`}>
           <svg
             width="9" height="9" viewBox="0 0 10 10"
             className={`transition-transform duration-300 ${open ? 'rotate-45' : ''}`}
@@ -40,7 +40,7 @@ function FAQItem({ q, a, open, onToggle }: { q: string; a: string; open: boolean
             transition={{ duration: 0.25, ease: 'easeInOut' }}
             className="overflow-hidden"
           >
-            <p className="font-sans font-light text-[#1A1A1A]/85 text-sm lg:text-base leading-[1.8] pb-5 max-w-2xl">
+            <p className="font-sans font-light text-white/85 text-sm lg:text-base leading-[1.8] pb-5 max-w-2xl">
               {a}
             </p>
           </motion.div>
@@ -53,7 +53,7 @@ function FAQItem({ q, a, open, onToggle }: { q: string; a: string; open: boolean
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0)
   return (
-    <section id="faq" className="py-24 lg:py-32 bg-[#FDFDFD]">
+    <section id="faq" className="py-24 lg:py-32 bg-[#0F0F0F]">
       <div className="max-w-[1280px] mx-auto px-6 xl:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
           {/* Left */}
@@ -61,12 +61,12 @@ export default function FAQ() {
             <p className="text-xs md:text-sm font-sans font-bold tracking-[0.25em] text-[#C59C47] uppercase mb-3">
               Perguntas Frequentes
             </p>
-            <h2 className="font-serif font-light text-[#1A1A1A] text-[2.2rem] sm:text-[2.8rem] leading-[1.1] tracking-tight">
+            <h2 className="font-serif font-light text-white text-[2.2rem] sm:text-[2.8rem] leading-[1.1] tracking-tight">
               Dúvidas <em className="italic text-[#C59C47] font-normal">respondidas</em>.
             </h2>
           </div>
           {/* Right */}
-          <div className="lg:col-span-8 border-t border-[#EDEDED]">
+          <div className="lg:col-span-8 border-t border-[#C59C47]/10">
             {FAQS.map((faq, i) => (
               <FAQItem key={i} q={faq.q} a={faq.a} open={open === i} onToggle={() => setOpen(open === i ? null : i)} />
             ))}

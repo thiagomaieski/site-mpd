@@ -129,16 +129,16 @@ export default function Testimonials() {
   }, [emblaApi, onSelect])
 
   return (
-    <section id="depoimentos" className="py-24 lg:py-32 bg-[#F8F9FA] border-y border-[#EDEDED]">
+    <section id="depoimentos" className="py-24 lg:py-32 bg-[#0B0B0B] border-y border-[#C59C47]/10">
       <div className="max-w-[1280px] mx-auto px-6 xl:px-0">
 
         {/* Header with Google Rating Badge */}
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8 lg:mb-14 gap-6 pb-6 lg:pb-8 border-b border-[#EDEDED]">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8 lg:mb-14 gap-6 pb-6 lg:pb-8 border-b border-[#C59C47]/10">
           <div>
             <p className="text-xs md:text-sm font-sans font-bold tracking-[0.25em] text-[#C59C47] uppercase mb-3">
               Depoimentos
             </p>
-            <h2 className="font-serif font-light text-[#1A1A1A] text-[2.2rem] sm:text-[2.8rem] lg:text-[3.2rem] leading-[1.1] tracking-tight">
+            <h2 className="font-serif font-light text-white text-[2.2rem] sm:text-[2.8rem] lg:text-[3.2rem] leading-[1.1] tracking-tight">
               O que dizem nossos <em className="italic text-[#C59C47] font-normal">Clientes</em>.
             </h2>
           </div>
@@ -148,7 +148,7 @@ export default function Testimonials() {
             href="https://www.google.com/maps/place/MPD+Advocacia/@-22.8197891,-47.1663716,17z/data=!3m1!4b1!4m6!3m5!1s0x94c8bf1ad2aa1dd1:0x1a0d6748309e60b0!8m2!3d-22.8197891!4d-47.1663716!16s%2Fg%2F11t9mk1wcv"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 bg-white border border-[#E5E5E3] p-4 lg:p-5 shadow-[0_4px_16px_rgba(0,0,0,0.02)] hover:border-[#C59C47]/60 transition-all duration-300 shrink-0"
+            className="flex items-center gap-4 bg-[#121212] border border-[#C59C47]/15 p-4 lg:p-5 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:border-[#C59C47]/60 transition-all duration-300 shrink-0"
             aria-label="Ver MPD Advocacia no Google Maps"
           >
             {/* Google Icon */}
@@ -160,14 +160,14 @@ export default function Testimonials() {
             </svg>
             <div>
               <div className="flex items-center gap-1.5">
-                <span className="font-sans font-bold text-[#1A1A1A] text-lg leading-none">5.0</span>
+                <span className="font-sans font-bold text-white text-lg leading-none">5.0</span>
                 <div className="flex items-center text-[#FABB05]">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-3.5 h-3.5 fill-current stroke-current" />
                   ))}
                 </div>
               </div>
-              <p className="font-sans font-light text-[11px] lg:text-xs text-[#1A1A1A]/60 mt-1">
+              <p className="font-sans font-light text-[11px] lg:text-xs text-white/60 mt-1">
                 Baseado em 139 avaliações no Google Maps
               </p>
             </div>
@@ -184,10 +184,10 @@ export default function Testimonials() {
                 key={i}
                 className="pl-6 min-w-0 flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.333333%]"
               >
-                <div className="h-full bg-white border border-[#E5E5E3] hover:border-[#C59C47] hover:shadow-[0_8px_32px_rgba(197,156,71,0.08)] transition-all duration-300 p-8 lg:p-10 flex flex-col justify-between relative group select-none">
+                <div className="h-full bg-[#121212] border border-[#C59C47]/15 hover:border-[#C59C47] hover:shadow-[0_8px_32px_rgba(197,156,71,0.12)] transition-all duration-300 p-8 lg:p-10 flex flex-col justify-between relative group select-none">
                   
                   {/* Google Icon Watermark */}
-                  <div className="absolute top-8 right-8 text-[#1A1A1A]/5 group-hover:text-[#C59C47]/10 transition-colors duration-300">
+                  <div className="absolute top-8 right-8 text-white/5 group-hover:text-[#C59C47]/10 transition-colors duration-300">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                       <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -197,25 +197,27 @@ export default function Testimonials() {
                   </div>
 
                   {/* Stars */}
-                  <div className="flex items-center text-[#FABB05] gap-0.5 mb-6">
-                    {[...Array(5)].map((_, idx) => (
-                      <Star key={idx} className="w-4 h-4 fill-current stroke-current" />
-                    ))}
+                  <div>
+                    <div className="flex items-center text-[#FABB05] gap-0.5 mb-6">
+                      {[...Array(5)].map((_, idx) => (
+                        <Star key={idx} className="w-4 h-4 fill-current stroke-current" />
+                      ))}
+                    </div>
+
+                    <p className="font-sans font-light text-white/80 text-sm md:text-base leading-relaxed mb-8 flex-1">
+                      “{r.text.length > 240 && !expandedReviews[i] ? `${r.text.substring(0, 240)}...` : r.text}”
+                      {r.text.length > 240 && (
+                        <button
+                          onClick={() => toggleExpand(i)}
+                          className="text-[#C59C47] font-semibold text-xs ml-2 hover:underline focus:outline-none inline-block transition-colors duration-200"
+                        >
+                          {expandedReviews[i] ? 'Ler menos' : 'Ler mais'}
+                        </button>
+                      )}
+                    </p>
                   </div>
 
-                  <p className="font-sans font-light text-[#1A1A1A]/85 text-sm md:text-base leading-relaxed mb-8 flex-1">
-                    “{r.text.length > 240 && !expandedReviews[i] ? `${r.text.substring(0, 240)}...` : r.text}”
-                    {r.text.length > 240 && (
-                      <button
-                        onClick={() => toggleExpand(i)}
-                        className="text-[#C59C47] font-semibold text-xs ml-2 hover:underline focus:outline-none inline-block transition-colors duration-200"
-                      >
-                        {expandedReviews[i] ? 'Ler menos' : 'Ler mais'}
-                      </button>
-                    )}
-                  </p>
-
-                  <div className="border-t border-[#EDEDED] pt-5 flex items-center justify-between">
+                  <div className="border-t border-[#C59C47]/10 pt-5 flex items-center justify-between">
                     <div className="flex items-center gap-3.5">
                       {/* Author Image or Initials Monogram */}
                       {r.image ? (
@@ -225,12 +227,12 @@ export default function Testimonials() {
                           className="w-10 h-10 rounded-full object-cover shrink-0 border border-[#C59C47]/20 group-hover:border-[#C59C47]/50 transition-all duration-300"
                         />
                       ) : (
-                        <div className="w-10 h-10 rounded-full bg-[#1A1A1A] text-[#C59C47] font-sans font-bold text-xs flex items-center justify-center tracking-wider select-none shrink-0 border border-[#C59C47]/20 group-hover:border-[#C59C47]/50 transition-all duration-300">
+                        <div className="w-10 h-10 rounded-full bg-[#0B0B0B] text-[#C59C47] font-sans font-bold text-xs flex items-center justify-center tracking-wider select-none shrink-0 border border-[#C59C47]/20 group-hover:border-[#C59C47]/50 transition-all duration-300">
                           {r.initials}
                         </div>
                       )}
                       <div>
-                        <p className="font-serif text-base text-[#1A1A1A] font-semibold">{r.author}</p>
+                        <p className="font-serif text-base text-white font-semibold">{r.author}</p>
                       </div>
                     </div>
                   </div>
@@ -247,8 +249,8 @@ export default function Testimonials() {
             disabled={!canScrollPrev}
             className={`w-10 h-10 flex items-center justify-center border transition-all duration-300 ${
               !canScrollPrev
-                ? 'border-[#E5E5E3] text-[#1A1A1A]/20 cursor-not-allowed'
-                : 'border-[#1A1A1A] text-[#1A1A1A] hover:bg-[#C59C47] hover:border-[#C59C47] hover:text-white'
+                ? 'border-neutral-800 text-white/20 cursor-not-allowed'
+                : 'border-[#C59C47]/40 text-[#C59C47] hover:bg-[#C59C47] hover:border-[#C59C47] hover:text-[#0B0B0B]'
             }`}
             aria-label="Anterior"
           >
@@ -262,7 +264,7 @@ export default function Testimonials() {
                 key={idx}
                 onClick={() => scrollTo(idx)}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  selectedIndex === idx ? 'w-6 bg-[#C59C47]' : 'w-2 bg-[#1A1A1A]/20 hover:bg-[#1A1A1A]/40'
+                  selectedIndex === idx ? 'w-6 bg-[#C59C47]' : 'w-2 bg-white/25 hover:bg-white/40'
                 }`}
                 aria-label={`Ir para slide ${idx + 1}`}
               />
@@ -274,8 +276,8 @@ export default function Testimonials() {
             disabled={!canScrollNext}
             className={`w-10 h-10 flex items-center justify-center border transition-all duration-300 ${
               !canScrollNext
-                ? 'border-[#E5E5E3] text-[#1A1A1A]/20 cursor-not-allowed'
-                : 'border-[#1A1A1A] text-[#1A1A1A] hover:bg-[#C59C47] hover:border-[#C59C47] hover:text-white'
+                ? 'border-neutral-800 text-white/20 cursor-not-allowed'
+                : 'border-[#C59C47]/40 text-[#C59C47] hover:bg-[#C59C47] hover:border-[#C59C47] hover:text-[#0B0B0B]'
             }`}
             aria-label="Próximo"
           >
