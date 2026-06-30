@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 const STATS = [
   { number: '15+',    label: 'Anos de Atuação',     detail: 'Litígios de alta complexidade' },
-  { number: 'Centenas de', label: 'Causas Conduzidas',   detail: 'Instâncias administrativas e judiciais' },
+  { number: 'Centenas', label: 'de Causas Conduzidas', detail: 'Instâncias administrativas e judiciais' },
   { number: '4',      label: 'Áreas de Excelência', detail: 'Trabalhista · Prev. · Cível · Criminal' },
   { number: '100%',   label: 'Triagem Direta',      detail: 'Todas as triagens são conduzidas diretamente pelo Dr. Marcos.' },
 ]
@@ -21,7 +21,11 @@ export default function Credibility() {
               transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
               className="px-4 sm:px-6 lg:px-10 first:lg:pl-0 last:lg:pr-0"
             >
-              <p className="font-serif font-light text-[2.2rem] sm:text-[2.8rem] lg:text-[3.4rem] text-white leading-none mb-2">
+              <p className={`font-serif font-light text-white leading-none mb-2 ${
+                s.number === 'Centenas' 
+                  ? 'text-[2rem] sm:text-[2.5rem] lg:text-[3rem]' 
+                  : 'text-[2.2rem] sm:text-[2.8rem] lg:text-[3.4rem]'
+              }`}>
                 {s.number}
               </p>
               <p className="font-sans font-bold text-xs sm:text-sm uppercase tracking-[0.2em] text-[#C59C47] mb-2">
