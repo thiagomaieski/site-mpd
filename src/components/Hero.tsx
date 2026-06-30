@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import bgHero from '../assets/background-hero-mpd-dark-v2.avif'
+import bgHero from '../assets/background-hero-mpddark.avif'
+import bgHeroMobile from '../assets/background-mobile-dark.avif'
 
 const WA_URL = "https://wa.me/5519988884886?text=Ol%C3%A1%2C%20Dr.%20Marcos.%20Gostaria%20de%20agendar%20uma%20consulta%20jur%C3%ADdica."
 
@@ -26,7 +27,7 @@ export default function Hero() {
       className="relative h-[100dvh] lg:min-h-screen flex items-end lg:items-center bg-[#0B0B0B] overflow-hidden bg-top lg:bg-center bg-cover bg-no-repeat hero-bg-responsive"
       style={{
         '--bg-desktop': `url(${bgHero})`,
-        '--bg-mobile': `url(${bgHero})`
+        '--bg-mobile': `url(${bgHeroMobile})`
       } as React.CSSProperties}
     >
       <style>{`
@@ -63,7 +64,7 @@ export default function Hero() {
           {/* Headline — 2 lines, max impact */}
           <motion.h1 variants={fadeUp} className="font-serif font-medium text-white leading-[1.0] tracking-tight mb-5 sm:mb-8">
             <span className="block text-[clamp(1.8rem,9.15vw,2.2rem)] sm:text-[3rem] lg:text-[4.2rem] xl:text-[4.8rem]">
-              Seu patrimônio e seus direitos
+              Seus Direitos e seu patrimônio
             </span>
             <span className="block text-[clamp(1.8rem,9.15vw,2.2rem)] sm:text-[3rem] lg:text-[4.2rem] xl:text-[4.8rem]">
               merecem <em className="italic text-[#C59C47] font-normal">atenção pessoal</em>.

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import fotoCTA from '../assets/drmarcos-cta.avif'
+import fotoCTA from '../assets/drmarcos-sobre.avif'
 
 const WA_URL = "https://wa.me/5519988884886?text=Ol%C3%A1%2C%20Dr.%20Marcos.%20Gostaria%20de%20iniciar%20uma%20consulta%20jur%C3%ADdica."
 
@@ -55,7 +55,7 @@ export default function ContactCTA() {
 
           {/* Micro-signals */}
           <div className="mt-8 flex items-center gap-5 sm:gap-6 flex-wrap">
-            {['Sigilo absoluto', 'Resposta no mesmo dia', 'Sem compromisso'].map((t) => (
+            {['Sigilo absoluto', 'Agilidade', 'Sem falsas promessas'].map((t) => (
               <span key={t} className="flex items-center gap-1.5 text-xs md:text-sm font-sans font-bold uppercase tracking-[0.16em] text-white/50">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C59C47]" />
                 {t}

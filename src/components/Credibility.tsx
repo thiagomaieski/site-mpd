@@ -2,9 +2,9 @@ import { motion } from 'framer-motion'
 
 const STATS = [
   { number: '15+',    label: 'Anos de Atuação',     detail: 'Litígios de alta complexidade' },
-  { number: '1.200+', label: 'Causas Conduzidas',   detail: 'Instâncias administrativas e judiciais' },
+  { number: 'Centenas de', label: 'Causas Conduzidas',   detail: 'Instâncias administrativas e judiciais' },
   { number: '4',      label: 'Áreas de Excelência', detail: 'Trabalhista · Prev. · Cível · Criminal' },
-  { number: '100%',   label: 'Atendimento Direto',  detail: 'Dr. Marcos em cada etapa do caso' },
+  { number: '100%',   label: 'Triagem Direta',      detail: 'Todas as triagens são conduzidas diretamente pelo Dr. Marcos.' },
 ]
 
 export default function Credibility() {
